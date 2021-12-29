@@ -1,5 +1,5 @@
 from .intimations import *
-import argparse, textwrap
+import argparse
 
 def _argsFilter(args):
     '''
@@ -19,7 +19,7 @@ if __name__=="__main__":
         prog='intimations', 
         description='''
 Description:
-    - push notifications with different icons
+    - push/toast notifications with different icons
     - beep sound with different types of sound
     - telegram message (requires your botAPI and ChatID)
   Know more at https://github.com/AbhijithAJ/intimations''',
