@@ -24,13 +24,13 @@ This module makes it easy to get intimations such as a beep sound, push notifica
 - Make a buzzer sound with different sound effects
 - Get a message intimations to your smartphone (via telegram bot).
 
-*Using this module, receive a telegram message intimations when execution of a process/code is completed on cloud platform.*
+*Using this module, telegram messages would be received when execution of a process/code is completed on system or a cloud platform.*
 
 **Benefits**
 
-You can focus on your other activities till you receive a intimations about your executing code/process.
+You can focus on other activities till you receive an intimation about your executing code/process.
 
-Interactive icons and sounds which will intimate you about the executing process/code's activity, which save your time and let you enjoy the status of your executing code/process.
+Interactive icons and sounds which will intimate you about the executing process/code's activity and saves your time and let you enjoy the status of your executing code/process.
 
 ## Installation
 
