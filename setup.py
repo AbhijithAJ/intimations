@@ -1,6 +1,4 @@
 """Setup for the intimations package."""
-
-#from distutils.core import setup
 from setuptools import setup,find_packages
 
 with open('README.md','r') as f:
@@ -18,13 +16,14 @@ setup(
     long_description=README,
     keywords=['intimation', 'intimations', 'desktop notifications', 'windows notifications', 'cloud notification', 'command line notifications', 'process notifications', 'process intimation' 
     'intimate after done', 'cross platform notifications', 'buzzer sound notifications', 'message from cloud', 'cloud to mobile', 'mobile notification after a process is done',
-    'system to mobile', 'laptop to mobile', 'cloud process intimation', 'sound intimations', 'buzzer intimations', 'intimate about process'],
+    'system to mobile', 'laptop to mobile', 'cloud process intimation', 'sound intimations', 'buzzer intimations', 'intimate about process', 'inform after done', 'inform after complete', 'text when finish', 
+    'message after done', 'whatsapp on done'], 
     url='https://github.com/AbhijithAJ/intimations',
     download_url='https://github.com/AbhijithAJ/intimations/archive/refs/tags/v1.0.tar.gz',
-    packages=find_packages('intimations'),
+    packages=['intimations'],
+    package_data={'intimations': ['Sounds/*.wav','Icons/*.ico']},
     python_requires=">=3.2",
     install_requires=['playsound==1.2.2', 'win10toast ; platform_system=="Windows"'],
-    include_package_data=True,
     classifiers=[
         # Trove classifiers
         # (https://pypi.python.org/pypi?%3Aaction=list_classifiers)

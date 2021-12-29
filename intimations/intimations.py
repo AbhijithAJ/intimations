@@ -66,13 +66,9 @@ def push(title:str='intimations', message:str='By Abhijith Boppe', duration:floa
     def _run():
         if sys.platform == 'win32': # check for windows platform  
             while 1:
-                '''windows toast Notifier cant handle multiple notifications at once. 
-                 '''
-                try:
-                    ToastNotifier().show_toast(title, message, duration=duration, icon_path=icon)
-                    break
-                except Exception as e:
-                    time.sleep(0.3)
+                #windows toast Notifier cant handle multiple notifications at once. 
+                try:ToastNotifier().show_toast(title, message, duration=duration, icon_path=icon);break
+                except Exception as e: time.sleep(0.3)
         elif sys.platform == 'Darwin': # macos
             try:os.system(f'osascript -e \'display notification "{title}!" with title "{message}"\'')
             except Exception as e: raise Exception(f'command osascript not found. Install it to continue.')
@@ -92,7 +88,8 @@ def telegram(botAPI:'str'=None, chatID:str=None, title:str='intimations', messag
     '''Send message to telegram with telegram bot api and it's chat id
     '''
     botAPI = botAPI if botAPI not in [None, '']  else _getenv('BOTAPI') 
-    chatID = chatID if chatID not in [None, '']  else _getenv('CHATID') 
+    chatID = chatID if chatID not in [None, '']  else _getenv('CHATID')
+    for ch in ['*','_','-','`']: message = message.replace(ch,f'\{ch}')
     title = urllib.parse.quote_plus(title)
     message = urllib.parse.quote_plus(message)
     url_send_message = f"https://api.telegram.org/bot{botAPI}/sendMessage?chat_id={chatID}&text=*{title}*%0A%0A{message}&parse_mode=markdown"
@@ -102,3 +99,4 @@ def telegram(botAPI:'str'=None, chatID:str=None, title:str='intimations', messag
         if response.getcode() != 200:
             raise Exception(f'Invalid api request  \n-> {url_send_message}')
     Thread(target=_run, args=()).start()
+    
