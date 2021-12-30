@@ -41,20 +41,20 @@ pip install intimations
 
 ## Command line Usage
 
-**To get a sound intimations**
-```
+**Get a sound intimation**
+```powershell
 python -m intimations beep --sound success --count 2 --interval 5
 ```
-*sound : 'info', 'danger', 'success', 'warning' or ANY_MP3_FILE_PATH*
+*sound : info, danger, success, warning or ANY_MP3_FILE_PATH*
 
-**To get a intimations message**
-```
+**Get message intimation**
+```powershell
 python -m intimations push --title 'TITLE OF INTIMATION' --message 'MESSAGE BODY' --icon success
 ```
-*icon : 'info', 'danger', 'success', 'warning' or ANY_ICO_FILE_PATH*
+*icon : info, danger, success, warning or ANY_ICO_FILE_PATH*
 
-**To get a Telegram bot intimation/Message**
-```
+**Get a Telegram bot Message intimation**
+```powershell
 python -m intimations telegram --botapi YOUR_TELEGRAM_BOT_API --chatid YOUR_BOT_CHAT_ID --title 'TITLE OF INTIMATION' --message 'MESSAGE BODY'
 ```
 
@@ -71,16 +71,16 @@ Replace '<YOUR_BOT_API>' with your bot api token.
 
 ## Using Telegram message feature effectively
 
-Initially Create a Telegram bot with the name you like and get the botAPI token and chatID as shown in the video.
+Create Telegram bot and get the botAPI token and chatID as shown in the video.
 
-Create variables BOTAPI and CHATID in your OS environmental variables and assign values to them.
+Create **BOTAPI** and **CHATID** in your OS environmental variables and assign there values.
 
-Now, on your terminal, type your command followed by this python module command, as seen in the sample below.
+Now, on terminal, type your command and then enter python module command, as shown below.
 
-```
+```bash
 ffuf -w /wordlist.txt -u https://target/FUZZ ; python3 -m intimations telegram -t "Title of Process" -m "Successfully executed"
 ```
-You will receive a telegram intimations on your mobile device instantly after your cloud platform has done FUZZING on your target or done with the process.
+After your cloud platform has completed FUZZING on your target or the execution of your instruction, you will receive a telegram notification on your mobile device.
 
 ### Integrating intimations in code
 
