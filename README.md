@@ -80,7 +80,7 @@ Now, on terminal, type your command and then enter python module command, as sho
 ```bash
 ffuf -w /wordlist.txt -u https://target/FUZZ ; python3 -m intimations telegram -t "Title of Process" -m "Successfully executed"
 ```
-After your cloud platform has completed FUZZING or the execution of your instruction, you will receive a Telegram notification on your mobile device.
+You will receive a Telegram notification on your mobile device once your cloud platform has completed FUZZING or the execution of your command.
 
 ### Integrating intimations in code
 
