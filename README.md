@@ -34,7 +34,7 @@ Interactive icons and sounds which will intimate you about the executing process
 
 ## Installation
 
-You can install intimations by running the following command
+You can install *intimations* by running the following command
 ```
 pip install intimations
 ```
