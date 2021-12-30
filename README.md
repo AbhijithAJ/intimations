@@ -98,9 +98,9 @@ push('intimation', 'By Abhijith Boppe', duration:int=10, icon=r"sign")
 
 #get an intimation/message to your telegram mobile app
 BOT_API = 'YOUR BOT API'
-chatID = 'ONE OF YOUR CHAT ID'
+CHAT_ID = 'ONE OF YOUR CHAT ID'
 
-telegram(botAPI=BOT_API, chatID=chatID, title='TITLE', message'YOUR MESSAGE')
+telegram(botAPI=BOT_API, chatID=CHAT_ID, title='TITLE', message'YOUR MESSAGE')
 
 #Flash icon on taskbar (windows platform only)
 flashIcon(count:int=3, interval:float=1.5)
