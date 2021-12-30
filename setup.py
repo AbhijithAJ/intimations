@@ -23,7 +23,7 @@ setup(
     packages=['intimations'],
     package_data={'intimations': ['Sounds/*.wav','Icons/*.ico']},
     python_requires=">=3.2",
-    install_requires=['playsound==1.2.2', 'win10toast ; platform_system=="Windows"'],
+    install_requires=['playsound==1.2.2', 'win10toast==0.9 ; platform_system=="Windows"'],
     classifiers=[
         # Trove classifiers
         # (https://pypi.python.org/pypi?%3Aaction=list_classifiers)
