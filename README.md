@@ -30,7 +30,7 @@ This module makes it easy to get intimations such as a beep sound, push/toast no
 
 You can focus on other activities till you receive an intimation about your executing code/process.
 
-Interactive icons and sounds which will intimate you about the executing process/code's activity and saves your time and let you enjoy the status of your executing code/process.
+Interactive icons and sounds which will intimate you about the executing process/code's activity will save your time and let you enjoy the status of your executing code/process.
 
 ## Installation
 
@@ -130,3 +130,4 @@ for type_ in ['info', 'danger', 'warning' , 'success']:
 <a href="https://linkedin.com/in/abhijith-boppe" target="_blank">LinkedIn</a>
 
 Licensed under the [MIT License](LICENSE)
+ 
