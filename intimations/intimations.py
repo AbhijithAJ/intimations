@@ -89,7 +89,6 @@ def telegram(botAPI:'str'=None, chatID:str=None, title:str='intimations', messag
     '''
     botAPI = botAPI if botAPI not in [None, '']  else _getenv('BOTAPI') 
     chatID = chatID if chatID not in [None, '']  else _getenv('CHATID')
-    for ch in ['*','_','-','`']: message = message.replace(ch,f'\{ch}')
     title = urllib.parse.quote_plus(title)
     message = urllib.parse.quote_plus(message)
     url_send_message = f"https://api.telegram.org/bot{botAPI}/sendMessage?chat_id={chatID}&text=*{title}*%0A%0A{message}&parse_mode=markdown"
