@@ -42,7 +42,7 @@ DEVELOPED BY:
     cmd_beep.add_argument('-i', "--interval", default=3.0, required=False, help='time gap between each iteration')
 
     cmd_push = sub_cmds.add_parser('push', help='send a Push notification')
-    cmd_push.add_argument('-t',"--title", default='info', required=False, help='Title of the message')
+    cmd_push.add_argument('-t',"--title", default='intimations', required=False, help='Title of the message')
     cmd_push.add_argument('-m',"--message", default='By Abhijith Boppe', required=False, help='Message body')
     cmd_push.add_argument('-d',"--duration", default=3, required=False, help='no.of sec to display the notification')
     cmd_push.add_argument('-i',"--icon", default='sign', required=False, help="stock icons: informative, danger, success and warning or any .ico file")
