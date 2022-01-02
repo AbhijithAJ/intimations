@@ -37,12 +37,12 @@ DEVELOPED BY:
     sub_cmds = parser.add_subparsers(dest='command') #add dest to get sub command when parsing
     
     cmd_beep = sub_cmds.add_parser("beep", help='produce a beep/buzzer sound')  # adding sub command 'beep' 
-    cmd_beep.add_argument('-s', "--sound", default='informative', required=False, help='stock sound: informative, danger, success and warning or any .mp3/.wav file"')   # adding arguments to 'beep'  
+    cmd_beep.add_argument('-s', "--sound", default='info', required=False, help='stock sound: informative, danger, success and warning or any .mp3/.wav file"')   # adding arguments to 'beep'  
     cmd_beep.add_argument('-c', "--count", default=1, required=False, help='no.of time to repeat')
     cmd_beep.add_argument('-i', "--interval", default=3.0, required=False, help='time gap between each iteration')
 
     cmd_push = sub_cmds.add_parser('push', help='send a Push notification')
-    cmd_push.add_argument('-t',"--title", default='intimations', required=False, help='Title of the message')
+    cmd_push.add_argument('-t',"--title", default='info', required=False, help='Title of the message')
     cmd_push.add_argument('-m',"--message", default='By Abhijith Boppe', required=False, help='Message body')
     cmd_push.add_argument('-d',"--duration", default=3, required=False, help='no.of sec to display the notification')
     cmd_push.add_argument('-i',"--icon", default='sign', required=False, help="stock icons: informative, danger, success and warning or any .ico file")
