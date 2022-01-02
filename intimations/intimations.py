@@ -69,8 +69,8 @@ def push(title:str='intimations', message:str='By Abhijith Boppe', duration:floa
                 #windows toast Notifier cant handle multiple notifications at once. 
                 try:ToastNotifier().show_toast(title, message, duration=duration, icon_path=icon);break
                 except Exception as e: time.sleep(0.3)
-        elif sys.platform == 'Darwin': # macos
-            try:os.system(f'osascript -e \'display notification "{title}!" with title "{message}"\'')
+        elif sys.platform == 'darwin': # macos
+            try:os.system(f'osascript -e \'display notification "{message}!" with title "{title}"\'')
             except Exception as e: raise Exception(f'command osascript not found. Install it to continue.')
         else: # linux
             try:os.system(f"notify-send -i '{icon}' '{title}' '{message}'")
