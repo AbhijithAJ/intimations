@@ -32,6 +32,8 @@ You can focus on other activities till you receive an intimation about your exec
 
 Interactive icons and sounds which will intimate you about the executing process/code's activity will save your time and let you enjoy the status of your executing code/process.
 
+:warning: **Warning:** The intimations module is not secure. Only pass data you trust. :warning: 
+
 ## Installation
 
 You can install **intimations** by running the following command
